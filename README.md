@@ -1,19 +1,44 @@
-# 🎈 Blank app template
+# Log-Normal Population Analyzer
 
-A simple Streamlit app template for you to modify!
+This project provides an interactive framework for analyzing and visualizing overlapping **log-normal populations**, such as those encountered in **geochemical data interpretation**, **environmental monitoring**, or **economic modeling**.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+The tool is specifically designed to support:
 
-### How to run it on your own machine
+- Visual separation of mixed populations using dynamic thresholds
+- Probability density estimation and classification
+- Statistical comparison of log-transformed and original data
+- Probability plots for assessing normality in logarithmic space
 
-1. Install the requirements
+---
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## 🔬 Scientific Motivation
 
-2. Run the app
+In geochemical exploration and environmental data analysis, element concentrations often follow **log-normal distributions** due to multiplicative geological processes. Properly separating overlapping geochemical populations is essential for:
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+- Identifying geochemical anomalies or halos
+- Defining background vs. anomaly thresholds
+- Supporting machine learning classification
+- Interpreting probabilistic models
+
+This tool assists in **manually and visually identifying those populations**, while computing descriptive statistics in both linear and log space.
+
+---
+
+## 📊 Features
+
+- Simulates **3 log-normal populations** with tunable parameters (log-mean, log-std)
+- Allows **manual separation** via border sliders
+- Automatically updates:
+  - Group-wise statistics (mean, std) in both original and log scales
+  - Log-normal PDF curves
+  - Combined population curve
+  - Normal probability (QQ) plot of log-transformed data
+- Switch between **original** and **logarithmic evaluation** modes
+
+---
+
+## 📁 Usage
+
+1. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
